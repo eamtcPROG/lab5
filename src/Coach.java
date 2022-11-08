@@ -1,4 +1,4 @@
-public class Coach extends Human{
+public class Coach extends Human implements ICoach{
     public int experince;
     public void createCoach(String n,String s,int a,int e){
         this.name = n;

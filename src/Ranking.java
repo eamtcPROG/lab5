@@ -1,15 +1,19 @@
-public class Ranking extends Game{
+import java.util.Arrays;
+
+public class Ranking {
     public int points;
-    public int calcPoints(Team t1, Team t2){
-        play(t1, t2);
-        if(this.win == 1){
-            this.points = 3;
-        } else if (this.win == 0) {
-            this.points = 1;
-        }
-        else{
-            this.points = 0;
-        }
-        return this.points;
-    }
+    public int winnerId;
+   public void calcTop(int arr[]){
+       this.points = Arrays.stream(arr).max().getAsInt();
+       for (int i =0;i<arr.length;i++){
+           if(arr[i] == points){
+               this.winnerId=i;
+           }
+       }
+   }
+   public int calcGamePoints(int arr[]){
+       int p;
+       p = Arrays.stream(arr).sum();
+       return p;
+   }
 }

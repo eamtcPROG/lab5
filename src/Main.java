@@ -2,8 +2,12 @@ public class Main {
     public static void main(String[] args) {
 
         Championship c = new Championship();
-        c.playChampionship();
-        System.out.println(c.pointsWinner);
-        System.out.println(c.winner);
+        while (true){
+            c.playChampionship();
+            System.out.println("--------------");
+            System.out.println("Points: " + c.pointsWinner);
+            System.out.println("Winner: " + c.winner);
+            System.out.println("--------------");
+        }
     }
 }

@@ -1,4 +1,4 @@
-public class Team {
+public class Team extends Injury{
     public String name;
     public float rating;
 
@@ -30,6 +30,13 @@ public class Team {
         p11.createPlayer("Player","11",age[10],11,stats[31],stats[32],stats[33]);
         this.rating = (p1.rating+p2.rating+p3.rating+p4.rating+p5.rating+p6.rating+p7.rating+
                 p8.rating+p9.rating+p10.rating+p11.rating)/11;
+        createInjury(10);
+        if(this.injury == 8){
+            System.out.println("-------");
+            System.out.println("Injury in "+this.name);
+            System.out.println("-------");
+            this.rating = this.rating - 10;
+        }
         if (c.rating >6){
             this.rating = this.rating +1;
         }
